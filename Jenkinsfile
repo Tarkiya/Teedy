@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DEPLOYMENT_NAME = "hello-node"
-        CONTAINER_NAME = "teedy"
+        CONTAINER_NAME = "docs"
         IMAGE_NAME = "tarkiya/teedy:latest"
     }
 
@@ -32,7 +32,7 @@ pipeline {
 
         stage('Verify') {
             steps {
-                sh 'kubectl rollout status deployment/${DEPLOYMENT_NAME}'
+//                 sh 'kubectl rollout status deployment/${DEPLOYMENT_NAME}'
                 sh 'kubectl get pods'
             }
         }
