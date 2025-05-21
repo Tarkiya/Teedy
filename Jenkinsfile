@@ -13,7 +13,7 @@ pipeline {
                 sh '''
                     if ! minikube status | grep -q "Running"; then
                         echo "Starting Minikube..."
-                        minikube start
+                        minikube start --force
                     else
                         echo "Minikube already running."
                     fi
