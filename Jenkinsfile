@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DEPLOYMENT_NAME = "hello-node"
-        CONTAINER_NAME = "docs"
+        CONTAINER_NAME = "teedy"
         IMAGE_NAME = "tarkiya/teedy:latest"
     }
 
