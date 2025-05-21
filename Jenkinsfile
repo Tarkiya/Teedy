@@ -32,10 +32,8 @@ pipeline {
 
         stage('Verify') {
             steps {
-                sh "kubectl rollout status deployment/${env.DEPLOYMENT_NAME}"
-                sh "kubectl get pods -l app=${env.DEPLOYMENT_NAME} -o wide"
-                sh "kubectl describe pods -l app=${env.DEPLOYMENT_NAME}"
-                sh "kubectl logs --previous -l app=${env.DEPLOYMENT_NAME}"
+                sh 'kubectl rollout status deployment/${DEPLOYMENT_NAME}'
+                sh 'kubectl get pods'
             }
         }
     }
